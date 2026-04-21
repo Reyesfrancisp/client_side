@@ -225,11 +225,10 @@ def browser_context():
             headless=True,
             args=[
                 '--no-sandbox', 
-                '--disable-setuid-sandbox',       # <-- Add this
+                '--disable-setuid-sandbox',
                 '--disable-dev-shm-usage',
                 '--disable-gpu',
-                '--disable-software-rasterizer',
-                '--single-process'                # <-- Add this (Fixes the IPC crash)
+                '--disable-software-rasterizer'
             ]
         )
         logger.info("Playwright browser launched.")
