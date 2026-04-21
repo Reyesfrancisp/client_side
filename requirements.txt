@@ -12,11 +12,11 @@ ecdsa==0.19.0
 email_validator==2.2.0
 exceptiongroup==1.2.2
 Faker==36.1.0
-fastapi==0.115.8
+fastapi
 greenlet==3.1.1
 h11==0.16.0
-httpcore==1.0.7
-httpx==0.28.1
+httpcore
+httpx
 idna==3.10
 iniconfig==2.0.0
 Jinja2==3.1.5
@@ -26,7 +26,6 @@ passlib==1.7.4
 playwright==1.50.0
 pluggy==1.5.0
 psycopg2-binary==2.9.10
-pyasn1==0.6.3
 pycparser==2.22
 pydantic==2.10.6
 pydantic-settings==2.7.1
@@ -47,7 +46,6 @@ SQLAlchemy==2.0.38
 starlette==0.49.1
 tenacity==9.0.0
 tomli==2.2.1
-typing_extensions==4.12.2
 tzdata==2025.1
 urllib3==2.6.3
 uvicorn==0.34.0
