@@ -6,10 +6,10 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-# Install system dependencies
+# Install system dependencies (Added chromium here)
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y --no-install-recommends gcc python3-dev libssl-dev curl && \
+    apt-get install -y --no-install-recommends gcc python3-dev libssl-dev curl chromium && \
     rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip and essential Python tools

@@ -221,8 +221,16 @@ def browser_context():
     """Provide a Playwright browser context for UI tests (session-scoped)."""
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(
+            executable_path='/usr/bin/chromium',
             headless=True,
-            args=['--no-sandbox', '--disable-dev-shm-usage']
+            args=[
+                '--no-sandbox', 
+                '--disable-setuid-sandbox',       # <-- Add this
+                '--disable-dev-shm-usage',
+                '--disable-gpu',
+                '--disable-software-rasterizer',
+                '--single-process'                # <-- Add this (Fixes the IPC crash)
+            ]
         )
         logger.info("Playwright browser launched.")
         try:
